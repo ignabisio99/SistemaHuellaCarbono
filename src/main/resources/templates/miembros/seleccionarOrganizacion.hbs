@@ -1,0 +1,27 @@
+{{> miembros/base-miembro.hbs}}
+
+{{#partial "titulo"}}
+         <div class="col-sm-12 col-md-12 col-lg-8 col-xl-7 m-lg-auto">
+                <div class="align-items-center justify-content-center" style="display: flex; margin-top: 45px;">
+                    <h4 class="titulo_direccion"> Perteneciente a... </h4>
+
+                    <form method="post", action="/miembros/seleccionarOrganizacion/{{id}}">
+                    <select id="mis_organizaciones" class="form-select">
+                        <option selected> Mis organizaciones </option>
+
+                        {{#each organizaciones}}
+                        <option> {{this.nombre}} </option>
+                        {{/each}}
+                    </select>
+                </div>
+
+                <div class="col-sm-12 col-md-12 col-lg-8 col-xl-7 m-lg-auto">
+                      <div style="display: flex; margin-top: 45px;">
+                           <button type="button" id="last_buttons" class="btn btn-success btn-lg align-items-center"> Aceptar Organizacion  </button>
+                      </div>
+                </div>
+           </form>
+         </div>
+
+{{/partial}}
+{{> base.hbs}}

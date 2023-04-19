@@ -1,0 +1,31 @@
+{{> index/base-index.hbs}}
+
+{{#partial "titulo"}}
+    <title> Mi impacto ambiental </title>
+{{/partial}}
+
+{{#partial "container"}}
+
+    <div class="container">
+
+        <div class="row">
+            <div id="main_text" class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <h1> Conozca su impacto sobre el medioambiente </h1>
+                <p>
+                    Conocer la huella de carbono permite identificar rutas para controlar, reducir o mitigar las emisiones y
+                    impacto, y se reconoce cada vez más su alcance en el comercio de bienes y servicios.
+                </p>
+                <button type="button" id="main_button" class="btn btn-success btn-lg" onclick="location.href='crearUsuario'">
+                    Crea una cuenta GRATIS
+                </button>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <img id="main_img" src="/img/index-huellaDeCarbono.jpg" class="img-fluid">
+            </div>
+        </div>
+        <div id="caja_vacia"></div>
+
+    </div>
+
+{{/partial}}
+{{> base.hbs}}

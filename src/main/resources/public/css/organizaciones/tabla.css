@@ -1,0 +1,32 @@
+#description {
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+#table_header th {
+    font-size: 20px;
+}
+
+#table_body tr {
+    font-size: 18px;
+}
+
+#options {
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    border-style: hidden;
+    margin-right: 15px;
+    background-color: transparent;
+    border: none;
+}
+
+#options i {
+    font-size: 40px;
+    size: auto;
+}
+
+#link_perfil_MO {
+    font-size: 40px;
+    size: auto;
+}

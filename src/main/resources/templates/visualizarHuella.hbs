@@ -1,0 +1,50 @@
+
+{{#partial "titulo"}}
+    <title> Huella </title>
+{{/partial}}
+
+{{#partial "estilos"}}
+    <link rel="stylesheet" href="/css/organizaciones/tabla.css">
+{{/partial}}
+
+{{#partial "container"}}
+    <div id="title_row" class="row">
+        <div id="titulo" class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h1> Huella </h1>
+        </div>
+    </div>
+
+    <div class="container">
+
+
+        <div class="row">
+
+            <table id="table_header" class="table table-hover table-bordered">
+
+                <thead>
+                    <tr class="table-dark">
+                        <th scope="col"> Huella </th>
+                        <th scope="col"> Valor </th>
+
+                    </tr>
+                </thead>
+
+                <tbody id="table_body">
+
+
+                    <tr class="align-middle">
+                        <td> huella </td>
+                        <td> {{huella}} </td>
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+{{/partial}}
+{{> base.hbs}}

@@ -1,0 +1,71 @@
+{{> organizaciones/base-org.hbs}}
+
+{{#partial "titulo"}}
+    <title> Solicitudes </title>
+{{/partial}}
+
+{{#partial "estilos"}}
+    <link rel="stylesheet" href="/css/organizaciones/tabla.css">
+{{/partial}}
+
+{{#partial "container"}}
+    <div id="title_row" class="row">
+        <div id="titulo" class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h1> SOLICITUDES PENDIENTES </h1>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+            <p id="description">
+                En la siguiente tabla están todas las solicitudes pendientes que posee su organización.
+            </p>
+        </div>
+
+        <div class="row">
+
+            <table id="table_header" class="table table-hover table-bordered">
+
+                <thead>
+                    <tr class="table-dark">
+                        <th scope="col"> Nombre y apellido </th>
+                        <th scope="col"> Tipo Documento </th>
+                        <th scope="col"> Documento </th>
+                        <th scope="col"> Dirección </th>
+                        <th scope="col"> </th>
+                    </tr>
+                </thead>
+
+                <tbody id="table_body">
+
+                {{#each solicitudes}}
+                    <tr class="align-middle">
+                        <td> {{this.nombreYApellido}} </td>
+                        <td> {{this.tipoDocumento}} </td>
+                        <td> {{this.numeroDocumento}} </td>
+                        <td> {{this.direccion}} </td>
+                        <td class="text-center">
+                            <form method="post" action="/organizacion/aceptar/{{id}}">
+                                <button id="options" type="submit">
+                                    <i class='bx bx-check-circle' title="Aceptar"></i>
+                                </button>
+                            </form>
+                            <form method="post" action="/organizacion/rechazar/{{id}}">
+                                <button id="options" type="submit">
+                                    <i class='bx bx-x-circle' title="Rechazar"></i>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                {{/each}}
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+{{/partial}}
+{{> base.hbs}}
